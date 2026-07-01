@@ -34,3 +34,39 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+# This is my lamda function code that exist in aws
+
+<!-- exports.handler = async (event) => {
+  let name = "User";
+  try {
+    const body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
+    name = body.name || "User";
+  } catch (error) {
+    console.log("Error parsing data: ", error);
+    return {
+      statusCode: 400,
+      headers: {  // Changed from 'Headers' to 'headers'
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        message: `Invalid request body`,
+      }),
+    };
+  }
+
+  return {
+    statusCode: 200,
+    headers: {  // Changed from 'Headers' to 'headers'
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",  // Added this
+      "Access-Control-Allow-Headers": "Content-Type"  // Added this
+    },
+    body: JSON.stringify({
+      message: `Hello ${name}, we received your message`,
+    }),
+  };
+}; -->
